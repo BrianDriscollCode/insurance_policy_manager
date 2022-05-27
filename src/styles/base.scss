@@ -1,0 +1,60 @@
+$backgroundColor: rgb(197, 255, 250);
+$primaryColor: rgb(180, 255, 157);
+$secondaryColor: rgb(244, 255, 196);
+
+$btnPrimaryColor: rgb(165, 165, 165);
+$btnTextColor: white;
+
+
+@mixin flexCenter($direction, $itemAlign) {
+
+    display: flex;
+    justify-content: center;
+    align-items: $itemAlign;
+    flex-direction: $direction;
+    
+}
+
+@mixin mainButton {
+
+    width: 300px;
+    padding: 20px 0 20px 0;
+    margin: 40px 0 0 0;
+
+}
+
+body {
+    margin: 0;
+    background-color: $backgroundColor;
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4),
+    rgba(0, 0, 0, 0.5)), url("../images/more_hands.jpg");
+    background-size: cover;
+    background-position: 20%;
+    padding: 4.5em 0 4.5em 0;
+    text-align: center;
+    color: white;
+}
+
+h1 {
+
+    font-size: 50px;
+}
+
+header tagline {
+
+    font-size: 30px;
+
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: azure;
+    height: 300px;
+}

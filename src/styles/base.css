@@ -1,0 +1,39 @@
+body {
+  margin: 0;
+  background-color: #c5fffa;
+  font-family: 'Roboto', sans-serif;
+}
+
+header {
+  width: 100%;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.5))), url("../images/more_hands.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)), url("../images/more_hands.jpg");
+  background-size: cover;
+  background-position: 20%;
+  padding: 4.5em 0 4.5em 0;
+  text-align: center;
+  color: white;
+}
+
+h1 {
+  font-size: 50px;
+}
+
+header tagline {
+  font-size: 30px;
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: azure;
+  height: 300px;
+}
+/*# sourceMappingURL=base.css.map */

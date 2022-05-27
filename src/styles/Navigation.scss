@@ -1,0 +1,53 @@
+@import "./base";
+
+.navigation_page {
+    width: 100%;
+    @include flexCenter(row, none);
+    height: 100%;
+}
+
+.image_hero_container {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4),
+    rgba(0, 0, 0, 0.5)), url("../images/grandmother.jpg");
+    background-size: cover;
+    background-position: 25%;
+    color: rgb(255, 213, 220);
+    font-size: 25px;
+
+}
+
+.navigation_container {
+    width: 55%;
+    background-color: $primaryColor;
+    @include flexCenter(column, center);
+    
+}
+
+.nav_button_container {
+    align-self: center;
+}
+
+.company_info_container {
+    width: 15%;
+    display: flex;
+    @include flexCenter(column, center);
+    background-color: $secondaryColor;
+    flex-shrink: 0;
+}
+
+#last_button {
+
+    margin-bottom: 40px;
+
+}
+
+.nav_button {
+
+    @include mainButton;
+
+}
