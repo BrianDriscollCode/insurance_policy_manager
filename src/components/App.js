@@ -1,10 +1,11 @@
 import React, { useState } from 'react'
 
 import Navigation from './Navigation'
-import CreatePolicy from './CreatePolicy'
+import CreatePolicyForm from './CreatePolicyForm'
 import SeeCurrentPolicies from './SeeCurrentPolicies'
 import ProcessClaims from './ProcessClaims'
 import SeeHistory from './SeeHistory'
+import PolicyCreator from './PolicyCreator'
 
 import '../styles/base.css'
 import '../styles/Navigation.css'
@@ -32,7 +33,7 @@ const App = () => {
             </header>
 
             {render === 'Navigation' ? <Navigation setPage={setPage} /> : null}
-            {render === 'CreatePolicy' ? <CreatePolicy setPage={setPage} /> : null}
+            {render === 'PolicyCreator' ? <PolicyCreator setPage={setPage} /> : null}
             {render === 'SeeCurrentPolicies' ? <SeeCurrentPolicies setPage={setPage} /> : null}
             {render === 'ProcessClaims' ? <ProcessClaims setPage={setPage} /> : null}
             {render === 'SeeHistory' ? <SeeHistory setPage={setPage} /> : null}

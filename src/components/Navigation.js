@@ -31,7 +31,7 @@ const Navigation = ( {setPage} ) => {
                         <label> 
                             <button 
                                     className='nav_button' 
-                                    onClick={() => pageSetter('CreatePolicy')}
+                                    onClick={() => pageSetter('PolicyCreator')}
                                     > 
                                 Create Policy 
                             </button> 
