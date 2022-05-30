@@ -54,6 +54,7 @@ const CreatePolicyForm = ( props ) => {
 
     console.log(props.policies)
     console.log(props.setPage)
+    console.log(props.history)
 
     return (
 
@@ -112,7 +113,7 @@ const CreatePolicyForm = ( props ) => {
 }
 
 const mapStateToProps = (state) => {
-    return { policies: state.policies }
+    return { policies: state.policies, history: state.history }
 }
 
 
