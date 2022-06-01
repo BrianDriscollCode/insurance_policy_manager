@@ -1,47 +1,15 @@
 import { combineReducers } from "redux"; 
+import historyReducer from "./historyReducer";
+import policyReducer from "./policyReducer";
+import processClaimReducer from "./processClaimReducer";
 
 
-const initialPolicies = [
 
-        { name: 'Joe', id: '74d5220e-ac34-462b-9492-616b3218a942', age: 70, type: 'Life', claimAmount: 120000 },
-        { name: 'Sarah', id: 'cabe91f4-ad53-4bdb-b2cc-ccce8b23c6de', age: 86, type: 'Injury', claimAmount: 50000 },
-        { name: 'Bob', id: 'a65876cc-25af-4218-9cb3-ab978b52e2c8', age: 67, type: 'Full', claimAmount: 180000 },
-        { name: 'Loki', id: '0516f024-2aa8-43b8-8af2-7d16c0fad45b', age: 59, type: 'Life', claimAmount: 90000 }
-
-    ]
-
-const policyReducer = (allPolicies = initialPolicies, action) => {
-
-    if (action.type === "CREATE_POLICY") {
-        return [...allPolicies, action.payload]
-    }
-
-    return allPolicies
-
-}
-
-const initialHistory = [
-
-    { action: 'Added policy', policyAffected: '74d5220e-ac34-462b-9492-616b3218a942'},
-    { action: 'Added policy', policyAffected: 'cabe91f4-ad53-4bdb-b2cc-ccce8b23c6de'},
-    { action: 'Added policy', policyAffected: 'a65876cc-25af-4218-9cb3-ab978b52e2c8'},
-    { action: 'Added policy', policyAffected: '0516f024-2aa8-43b8-8af2-7d16c0fad45b'}
-
-]
-
-const historyReducer = (allHistory = initialHistory, action) => {
-
-    if (action.type === "CREATE_POLICY") {
-        return [...allHistory, action.payload];
-    }
-
-    return allHistory
-
-}
 
 export default combineReducers({
 
     policies: policyReducer,
-    history: historyReducer
+    history: historyReducer,
+    budget: processClaimReducer
 
 })

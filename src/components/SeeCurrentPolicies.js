@@ -1,6 +1,5 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { createPolicy } from '../actions'
 
 
 const SeeCurrentPolicies = ( {policies, setPage} ) => {
@@ -9,25 +8,47 @@ const SeeCurrentPolicies = ( {policies, setPage} ) => {
 
     const policyList = policies.map((policy) => 
 
-        <div key={policy.id} >
-            <div> Name: {policy.name} </div> 
-            <div> id: {policy.id} </div> 
-            <div> Age: {policy.age} </div>
-            <div> Name: {policy.type} </div>
-            <div> Name: {policy.claimAmount} </div>
+        <tr key={policy.id} >
+            <td> {policy.firstName} </td> 
+            <td> {policy.lastName} </td> 
+            <td> {policy.policyID} </td> 
+            <td> {policy.age} </td>
+            <td> {policy.type} </td>
+            <td> {policy.claimAmount} </td>
+            <td> {policy.dateCreated} </td>
+            <td> <button value={policy.policyID}> Delete </button> </td> 
             <br />
-        </div>
+        </tr>
         
         
 
     )
 
+    console.log(policies)
+
     return (
         
-        <div>
-            <button onClick={() => setPage('Navigation')}> Go back </button>
+        <div className='see_policies_container'>
+            <div className='see_policies_button_container'>
+                <button className="see_policies_back_button" onClick={() => setPage('Navigation')}> Go back </button>
+            </div> 
             
-            {policyList}
+            
+            <table id="customers">
+                <tr>
+                    <th> First Name </th>
+                    <th> Last Name </th>
+                    <th> Id </th>
+                    <th> Age </th>
+                    <th> Type</th>
+                    <th> Claim Amount </th>
+                    <th> Date Created </th>
+                    <th> Delete </th>
+                </tr>
+
+                {policyList}
+            </table>
+            
 
         </div>
 
