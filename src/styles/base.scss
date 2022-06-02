@@ -1,4 +1,5 @@
-$backgroundColor: rgb(197, 255, 250);
+$backgroundColor: linear-gradient(135deg, rgb(84, 97, 126) 14%, rgba(69,89,124,1) 52%, rgba(52,75,101,1) 100%, rgba(253,208,255,1) 100%, rgba(58,72,73,1) 100%);
+$secondBackgroundColor: linear-gradient(135deg, rgb(176, 147, 255) 14%, rgb(106, 116, 255) 52%, rgba(235,235,235,1) 100%, rgba(58,72,73,1) 100%, rgba(0,241,255,1) 100%);
 $primaryColor: rgb(180, 255, 157);
 $secondaryColor: rgb(244, 255, 196);
 
@@ -17,15 +18,20 @@ $btnTextColor: white;
 
 @mixin mainButton {
 
-    width: 300px;
+    width: 50%;
     padding: 20px 0 20px 0;
     margin: 40px 0 0 0;
 
 }
 
+#root {
+    height: 100%;
+    overflow: hidden;
+}
+
 body {
     margin: 0;
-    background-color: $backgroundColor;
+    background: $secondBackgroundColor;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -45,10 +51,52 @@ h1 {
     font-size: 50px;
 }
 
+.main_div {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
 header tagline {
 
     font-size: 30px;
 
+}
+
+.left_portion {
+    width: 25%;
+    height: 100%;
+    background-color: aliceblue;
+    border-radius: 20px 0 0 20px;
+    color: black;
+}
+
+.left_portion > div {
+    height: 100vh;
+}
+
+.right_portion {
+    width: 100%;
+    height: 95vh;
+    align-self: center;
+    margin: 0 auto 0 auto;
+    overflow-y: auto;
+    color: white;
+    
+}
+
+
+.right_portion > div {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+    align-items: center;
+    border-style: solid 1px;
+}
+
+.right_portion:nth-child(1) {
+    margin: 40px 0 0 0 ;
 }
 
 footer {

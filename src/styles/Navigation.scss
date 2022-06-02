@@ -2,30 +2,44 @@
 
 .navigation_page {
     width: 100%;
-    @include flexCenter(row, none);
+    display: flex;
+    /* justify-content: center; */
+    align-items: none;
+    flex-direction: row;
     height: 100%;
 }
 
-.image_hero_container {
+.navigation_page {
 
+    width: 95%;
+    height: 95vh;
     display: flex;
-    justify-content: center;
     align-items: center;
-    width: 30%;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4),
-    rgba(0, 0, 0, 0.5)), url("../images/grandmother.jpg");
-    background-size: cover;
-    background-position: 25%;
-    color: rgb(255, 213, 220);
-    font-size: 25px;
-
+    border-radius: 20px 0 0 20px;
+    background: $backgroundColor;
+    box-shadow: 7px 7px 24px -11px rgba(97,62,97,0.71);
+    color: white;
 }
 
 .navigation_container {
-    width: 55%;
-    background-color: $primaryColor;
+    width: 100%;
     @include flexCenter(column, center);
     
+}
+
+.main_icon {
+    margin: 40px 0 0 0;
+}
+
+.navigation_container h1 {
+    font-size: 20px;
+    margin: 20px 0 20px 0;
+    text-align: center;
+}
+
+.navigation_container p {
+    text-align: center;
+    padding: 0 10px 0 10px;
 }
 
 .nav_button_container {
@@ -33,10 +47,10 @@
 }
 
 .company_info_container {
-    width: 15%;
+    width: 85%;
+    margin: 0 0 20px 0;
     display: flex;
-    @include flexCenter(column, center);
-    background-color: $secondaryColor;
+    @include flexCenter(column, left);
     flex-shrink: 0;
 }
 
@@ -46,8 +60,18 @@
 
 }
 
+.nav_button_container {
+
+    display: flex; 
+    justify-content: center;
+    width: 100%;
+}
+
 .nav_button {
 
     @include mainButton;
+    align-self: center;
+    width: 50%;
 
 }
+

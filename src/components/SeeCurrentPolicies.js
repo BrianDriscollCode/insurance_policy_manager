@@ -29,9 +29,8 @@ const SeeCurrentPolicies = ( {policies, setPage} ) => {
     return (
         
         <div className='see_policies_container'>
-            <div className='see_policies_button_container'>
-                <button className="see_policies_back_button" onClick={() => setPage('Navigation')}> Go back </button>
-            </div> 
+
+            <h2> Policies </h2>
             
             
             <table id="customers">

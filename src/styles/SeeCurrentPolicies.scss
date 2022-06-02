@@ -18,6 +18,14 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
+    overflow-x:auto;
+
+}
+
+.see_policies_container h2 {
+
+  align-self: center;
+  font-size: 45px;
 
 }
 
@@ -35,7 +43,8 @@
     padding: 8px;
   }
   
-  #customers tr:nth-child(even){background-color: #f2f2f2;}
+  #customers tr:nth-child(even){background-color: #3e4a6e;}
+   #customers tr:nth-child(even){background-color: #494a61;}
   
   #customers tr:hover {background-color: #ddd;}
   

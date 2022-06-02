@@ -75,11 +75,7 @@ const CreatePolicyForm = ( props ) => {
     return (
 
         <div className="createPolicyContainer">
-
-            <button onClick={() => props.setPage('Navigation')}> Go back </button>
-
-
-
+            
             <h2> Create a new policy</h2>
 
             {/* <form onSubmit={submitNewPolicy}>
@@ -126,7 +122,7 @@ const CreatePolicyForm = ( props ) => {
             <div className="ui form createPolicyForm">
                 <div className="two fields">
                     <div className="field">
-                        <label>First name</label>
+                        <label style={{color: 'white'}}>First name</label>
                         <input 
                             type="text" 
                             placeholder="First Name"
@@ -135,7 +131,7 @@ const CreatePolicyForm = ( props ) => {
                         />
                     </div>
                     <div className="field">
-                        <label>Last name</label>
+                        <label style={{color: 'white'}}>Last name</label>
                         <input 
                             type="text" 
                             placeholder="Last Name"
@@ -147,7 +143,7 @@ const CreatePolicyForm = ( props ) => {
 
                 <div className='field'>
 
-                    <label> Enter age </label>
+                    <label style={{color: 'white'}}> Enter age </label>
                     <input 
                         placeholder='0' 
                         type="number"
@@ -158,7 +154,7 @@ const CreatePolicyForm = ( props ) => {
                 </div>
 
                 <div class="field">
-                    <label>Type</label>
+                    <label style={{color: 'white'}}>Type</label>
                     <select class="ui fluid dropdown" value={type} onChange={handleTypeChange}>
                             <option value="">Type</option>
                             <option value="Life">Life</option>
@@ -169,7 +165,7 @@ const CreatePolicyForm = ( props ) => {
 
                 <div className='field'>
 
-                    <label> Claim amount </label>
+                    <label style={{color: 'white'}}> Claim amount </label>
                     <input
                         placeholder='0' 
                         type="number"

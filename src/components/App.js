@@ -18,7 +18,7 @@ import '../styles/CreatePolicyForm.css'
 
 const App = () => {
 
-    const [render, setRender] = useState('Navigation')
+    const [render, setRender] = useState('PolicyCreator')
 
     const setPage = (pageName) => {
 
@@ -27,27 +27,39 @@ const App = () => {
 
     return (
 
+       
+
+        
         <div className='main_div'>
 
-            <header>
-                <h1> Life Giver International </h1>
-                <tagline> Giving you and yours time </tagline> 
-            </header>
+        <div className='navigation_page'>
 
-            {render === 'Navigation' ? <Navigation setPage={setPage} /> : null}
-            {render === 'PolicyCreator' ? <PolicyCreator setPage={setPage} /> : null}
-            {render === 'SeeCurrentPolicies' ? <SeeCurrentPolicies setPage={setPage} /> : null}
-            {render === 'ProcessClaims' ? <ProcessClaims setPage={setPage} /> : null}
-            {render === 'SeeHistory' ? <SeeHistory setPage={setPage} /> : null}
+            
+            <div className='left_portion'>
+                <Navigation setPage={setPage} />
+            </div>
+            
+            
+            
+                <div className="right_portion">
 
-            <footer> 
+                <header>
+                    <h1> Life Giver International </h1>
+                    <tagline> Giving you and yours time </tagline> 
+                </header>
 
-                <h2> This is a footer </h2>
-
-            </footer>
-
+                    {render === 'PolicyCreator' ? <PolicyCreator setPage={setPage} /> : null}
+                    {render === 'SeeCurrentPolicies' ? <SeeCurrentPolicies setPage={setPage} /> : null}
+                    {render === 'ProcessClaims' ? <ProcessClaims setPage={setPage} /> : null}
+                    {render === 'SeeHistory' ? <SeeHistory setPage={setPage} /> : null}
+                </div>
+            
+            
+        </div>
+            
 
         </div>
+        
 
     )
 

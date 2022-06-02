@@ -1,6 +1,11 @@
+#root {
+  height: 100%;
+  overflow: hidden;
+}
+
 body {
   margin: 0;
-  background-color: #c5fffa;
+  background: linear-gradient(135deg, #b093ff 14%, #6a74ff 52%, #ebebeb 100%, #3a4849 100%, #00f1ff 100%);
   font-family: 'Roboto', sans-serif;
 }
 
@@ -19,8 +24,63 @@ h1 {
   font-size: 50px;
 }
 
+.main_div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 header tagline {
   font-size: 30px;
+}
+
+.left_portion {
+  width: 25%;
+  height: 100%;
+  background-color: aliceblue;
+  border-radius: 20px 0 0 20px;
+  color: black;
+}
+
+.left_portion > div {
+  height: 100vh;
+}
+
+.right_portion {
+  width: 100%;
+  height: 95vh;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin: 0 auto 0 auto;
+  overflow-y: auto;
+  color: white;
+}
+
+.right_portion > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 40px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-style: solid 1px;
+}
+
+.right_portion:nth-child(1) {
+  margin: 40px 0 0 0;
 }
 
 footer {
@@ -42,9 +102,7 @@ footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  /* justify-content: center; */
   -webkit-box-align: none;
       -ms-flex-align: none;
           align-items: none;
@@ -55,28 +113,24 @@ footer {
   height: 100%;
 }
 
-.image_hero_container {
+.navigation_page {
+  width: 95%;
+  height: 95vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 30%;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.5))), url("../images/grandmother.jpg");
-  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)), url("../images/grandmother.jpg");
-  background-size: cover;
-  background-position: 25%;
-  color: #ffd5dc;
-  font-size: 25px;
+  border-radius: 20px 0 0 20px;
+  background: linear-gradient(135deg, #54617e 14%, #45597c 52%, #344b65 100%, #fdd0ff 100%, #3a4849 100%);
+  -webkit-box-shadow: 7px 7px 24px -11px rgba(97, 62, 97, 0.71);
+          box-shadow: 7px 7px 24px -11px rgba(97, 62, 97, 0.71);
+  color: white;
 }
 
 .navigation_container {
-  width: 55%;
-  background-color: #b4ff9d;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -90,6 +144,21 @@ footer {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+.main_icon {
+  margin: 40px 0 0 0;
+}
+
+.navigation_container h1 {
+  font-size: 20px;
+  margin: 20px 0 20px 0;
+  text-align: center;
+}
+
+.navigation_container p {
+  text-align: center;
+  padding: 0 10px 0 10px;
 }
 
 .nav_button_container {
@@ -99,7 +168,8 @@ footer {
 }
 
 .company_info_container {
-  width: 15%;
+  width: 85%;
+  margin: 0 0 20px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -107,14 +177,13 @@ footer {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-color: #f4ffc4;
   -ms-flex-negative: 0;
       flex-shrink: 0;
 }
@@ -123,9 +192,23 @@ footer {
   margin-bottom: 40px;
 }
 
+.nav_button_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+}
+
 .nav_button {
-  width: 300px;
+  width: 50%;
   padding: 20px 0 20px 0;
   margin: 40px 0 0 0;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  width: 50%;
 }
 /*# sourceMappingURL=Navigation.css.map */

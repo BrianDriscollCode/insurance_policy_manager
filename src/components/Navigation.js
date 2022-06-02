@@ -1,4 +1,5 @@
 import React from 'react'
+import main_icon from '../images/main_icon.png'
 
 const Navigation = ( {setPage} ) => {
 
@@ -11,81 +12,77 @@ const Navigation = ( {setPage} ) => {
 
     return (
 
-        <div className="navigation_page"> 
-
-            <div className='image_hero_container'> 
-
-                <h2> Love and care </h2> 
-
-            </div>
+        <div> 
 
             <div className="navigation_container">
 
                 
+                    <img src={main_icon} className="main_icon" /> 
 
                     <h1> Insurance Policy Manager </h1> 
                     
                     <p> An internal application for insurance companies to manage policies, claims, and client history. </p> 
 
                     <div className="nav_button_container">
-                        <label> 
+                        
                             <button 
                                     className='nav_button' 
                                     onClick={() => pageSetter('PolicyCreator')}
                                     > 
                                 Create Policy 
                             </button> 
-                        </label>
+                        
                     </div>
 
                     <div className="nav_button_container">
-                        <label> 
+                       
                             <button 
                                     className='nav_button'
                                     onClick={() => pageSetter('SeeCurrentPolicies')}
                                     > See Current Policies 
                             </button> 
-                        </label>
+                        
                     </div>
 
                     <div className="nav_button_container">
-                        <label> 
+                    
                             <button 
                                 className='nav_button'
                                 onClick={() => pageSetter('ProcessClaims')}
                             > Process Claims 
                             </button> 
-                        </label>
+                     
                     </div>
 
                     <div className="nav_button_container">
-                        <label> 
+                   
                             <button className='nav_button' 
                                     id="last_button"
                                     onClick={() => pageSetter('SeeHistory')}
                                     > See History 
                             </button> 
-                        </label>
+               
                     </div>
 
+                    <div className="company_info_container"> 
+
+                        <div>
+                            <label> Budget: </label> 
+                            <span> NUMBER </span>
+                        </div>
+
+                        <div>
+                            <label> Policy Holders: </label> 
+                            <span> NUMBER </span>
+                        </div>
+
+                    </div>
                 
                 
                 
             </div> 
 
-            <div className="company_info_container"> 
-
-                <div>
-                    <label> Budget: </label> 
-                    <span> NUMBER </span>
-                </div>
-
-                <div>
-                    <label> Policy Holders: </label> 
-                    <span> NUMBER </span>
-                </div>
-                
-            </div>
+        
 
         
         </div>
