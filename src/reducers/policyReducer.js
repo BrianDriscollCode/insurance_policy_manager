@@ -9,10 +9,25 @@ const initialPolicies = [
 
 export default (allPolicies = initialPolicies, action) => {
 
-if (action.type === "CREATE_POLICY") {
-    return [...allPolicies, action.payload]
-}
+    //via CreatePolicyForm.js
+    if (action.type === "CREATE_POLICY") {
+        return [...allPolicies, action.payload]
+    }
 
-return allPolicies
+    //via SeeCurrentPolicies.js
+    if (action.type === "DELETE_POLICY") {
+        
+        //update new array of objects without targeted entry
+        const updatedPolicies = allPolicies.filter(policy => 
+            
+            policy.policyID !== action.payload
+            
+        )
+
+        return updatedPolicies;
+
+    }
+
+    return allPolicies
 
 }

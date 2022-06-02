@@ -56,9 +56,9 @@ const CreatePolicyForm = ( props ) => {
 
         let uniqueID = uuidv4();
         const d = new Date();
-        let currentDate = d.getMonth().toString() + '/' + d.getDate().toString() + '/' + d.getFullYear().toString()
+        let currentDate = (d.getMonth() + 1).toString() + '/' + d.getDate().toString() + '/' + d.getFullYear().toString()
 
-        props.trackAction({action: 'Policy Created', date: currentDate, policyID: uniqueID})
+        props.trackAction({action: 'Created Policy', date: currentDate, policyID: uniqueID})
         props.createPolicy({firstName: firstName, lastName: lastName, policyID: uniqueID, age: age, type: type, claimAmount: claimAmount, dateCreated: currentDate})
         
         setPolicyCreator(); //toggle to submit message page "<PolicySubmitted /> via <PolicyCreator />"
@@ -77,47 +77,6 @@ const CreatePolicyForm = ( props ) => {
         <div className="createPolicyContainer">
             
             <h2> Create a new policy</h2>
-
-            {/* <form onSubmit={submitNewPolicy}>
-                <div className="ui input focus"> 
-                    <label> Enter name: </label>
-                    <input 
-                        type="text"
-                        value={name}
-                        onChange={handleNameChange}
-                    />
-                </div>
-
-                <div className="ui input focus"> 
-                    <label> Enter age (max: 120): </label>
-                    <input 
-                        type="number"
-                        value={age}
-                        onChange={handleAgeChange}
-                    />
-                </div>
-
-                <div className="ui input focus"> 
-                    <label> Choose type: </label>
-                    <input 
-                        type="text"
-                        value={type}
-                        onChange={handleTypeChange}
-                    />
-                </div>
-
-                <div className="ui input focus"> 
-                    <label> Enter claim amount (max: 200000): </label>
-                    <input 
-                        type="number"
-                        value={claimAmount}     
-                        onChange={handleClaimAmountChange}
-                    />
-                </div>
-
-                <button onClick={submitNewPolicy}> Add Policy </button> 
-
-            </form> */}
 
             <div className="ui form createPolicyForm">
                 <div className="two fields">

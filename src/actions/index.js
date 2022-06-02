@@ -9,6 +9,16 @@ export const createPolicy = (policyObject) => {
 
 }
 
+export const deletePolicy = (policyID) => {
+
+    return {
+        type: "DELETE_POLICY",
+        payload: policyID
+
+    }
+
+}
+
 export const trackAction = (dateObject) => {
 
 

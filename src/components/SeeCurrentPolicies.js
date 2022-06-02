@@ -1,10 +1,24 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import { deletePolicy } from '../actions'
+import { trackAction } from '../actions'
+import { v4 as uuidv4 } from 'uuid'
 
 
-const SeeCurrentPolicies = ( {policies, setPage} ) => {
+const SeeCurrentPolicies = ( {policies, setPage, deletePolicy, trackAction} ) => {
 
    
+    const deleteSelectedPolicy = (event) => {
+
+        deletePolicy(event.target.value)
+
+        let uniqueID = uuidv4()
+        const d = new Date();
+        let currentDate = (d.getMonth() + 1).toString() + '/' + d.getDate().toString() + '/' + d.getFullYear().toString()
+        
+        trackAction({action: 'Deleted Policy', date: currentDate, policyID: uniqueID})
+
+    }
 
     const policyList = policies.map((policy) => 
 
@@ -16,7 +30,7 @@ const SeeCurrentPolicies = ( {policies, setPage} ) => {
             <td> {policy.type} </td>
             <td> {policy.claimAmount} </td>
             <td> {policy.dateCreated} </td>
-            <td> <button value={policy.policyID}> Delete </button> </td> 
+            <td> <button value={policy.policyID} onClick={deleteSelectedPolicy}> Delete </button> </td> 
             <br />
         </tr>
         
@@ -61,4 +75,4 @@ const mapStateToProps = (state) => {
     return { policies: state.policies }
 }
 
-export default connect(mapStateToProps)(SeeCurrentPolicies)
+export default connect(mapStateToProps, { deletePolicy, trackAction })(SeeCurrentPolicies)
