@@ -2,7 +2,6 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { deletePolicy } from '../actions'
 import { trackAction } from '../actions'
-import { v4 as uuidv4 } from 'uuid'
 
 
 const SeeCurrentPolicies = ( {policies, setPage, deletePolicy, trackAction} ) => {
@@ -12,11 +11,10 @@ const SeeCurrentPolicies = ( {policies, setPage, deletePolicy, trackAction} ) =>
 
         deletePolicy(event.target.value)
 
-        let uniqueID = uuidv4()
         const d = new Date();
         let currentDate = (d.getMonth() + 1).toString() + '/' + d.getDate().toString() + '/' + d.getFullYear().toString()
         
-        trackAction({action: 'Deleted Policy', date: currentDate, policyID: uniqueID})
+        trackAction({action: 'Deleted Policy', date: currentDate, policyID: event.target.value})
 
     }
 
