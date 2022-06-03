@@ -71,11 +71,6 @@ const CreatePolicyForm = ( props ) => {
 
     }
 
-    console.log(props.policies)
-    console.log(props.history)
-    console.log(props)
-
-    console.log(firstName, lastName, age, type, claimAmount)
 
 
     return (
@@ -119,9 +114,9 @@ const CreatePolicyForm = ( props ) => {
 
                 </div>
 
-                <div class="field">
+                <div className="field">
                     <label style={{color: 'white'}}>Type</label>
-                    <select class="ui fluid dropdown" value={type} onChange={handleTypeChange}>
+                    <select className="ui fluid dropdown" value={type} onChange={handleTypeChange}>
                             <option value="">Type</option>
                             <option value="Life">Life</option>
                             <option value="Injury">Injury</option>
@@ -143,7 +138,7 @@ const CreatePolicyForm = ( props ) => {
                 </div>
 
                 <div className="submitButtonContainer">
-                    <button onClick={submitNewPolicy}> Submit </button>
+                    <button className="nav_button" id="button_black" onClick={submitNewPolicy}> Submit </button>
                 </div> 
 
                

@@ -1,3 +1,29 @@
+#button_black {
+  color: black;
+}
+
+.delete_or_submit_button {
+  background-color: #fdde54;
+  border-color: black;
+  border-radius: 5px;
+  border: 2px solid #fdde54;
+  -webkit-box-shadow: -4px 3px 12px -6px rgba(130, 130, 17, 0.69);
+          box-shadow: -4px 3px 12px -6px rgba(130, 130, 17, 0.69);
+}
+
+.delete_or_submit_button:hover {
+  background-color: #fdde54;
+  border-color: black;
+  border-radius: 5px;
+  border: 2px solid #fdde54;
+  -webkit-box-shadow: -4px 3px 12px -6px rgba(130, 130, 17, 0.69);
+          box-shadow: -4px 3px 12px -6px rgba(130, 130, 17, 0.69);
+  background-color: white;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 #root {
   height: 100%;
   overflow: hidden;
@@ -37,7 +63,7 @@ h1 {
           align-items: center;
 }
 
-header tagline {
+header p {
   font-size: 30px;
 }
 
@@ -206,9 +232,24 @@ footer {
   width: 50%;
   padding: 20px 0 20px 0;
   margin: 40px 0 0 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  background-color: aqua;
+  background-color: #fdde54;
+  border-color: black;
+  border-radius: 5px;
+  border: 2px solid #fdde54;
+  -webkit-box-shadow: -4px 3px 12px -6px rgba(130, 130, 17, 0.69);
+          box-shadow: -4px 3px 12px -6px rgba(130, 130, 17, 0.69);
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
   width: 50%;
+}
+
+.nav_button:hover {
+  background-color: white;
 }
 /*# sourceMappingURL=Navigation.css.map */

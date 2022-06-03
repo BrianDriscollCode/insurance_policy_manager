@@ -17,16 +17,40 @@ export default (allPolicies = initialPolicies, action) => {
     //via SeeCurrentPolicies.js
     if (action.type === "DELETE_POLICY") {
         
+
         //update new array of objects without targeted entry
         const updatedPolicies = allPolicies.filter(policy => 
             
             policy.policyID !== action.payload
             
-        )
+    )
 
-        return updatedPolicies;
+    return updatedPolicies;
 
     }
+
+    if (action.type === "EDIT_CLAIM") {
+
+        const claimPayout = action.payload.claimAmount
+        const entryID = action.payload.policyID
+
+        const updatedList = allPolicies.map(policy => {
+
+            if (policy.policyID == entryID) {
+                return {...policy, claimAmount: policy.claimAmount - claimPayout} 
+            }
+
+            return policy;
+
+        });
+
+        return updatedList
+
+    }
+
+        
+
+    
 
     return allPolicies
 

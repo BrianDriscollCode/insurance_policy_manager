@@ -45,7 +45,7 @@ const App = () => {
 
                 <header>
                     <h1> Life Giver International </h1>
-                    <tagline> Giving you and yours time </tagline> 
+                    <p> Giving you and yours time </p> 
                 </header>
 
                     {render === 'PolicyCreator' ? <PolicyCreator setPage={setPage} /> : null}

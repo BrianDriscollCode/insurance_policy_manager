@@ -28,7 +28,11 @@ const SeeCurrentPolicies = ( {policies, setPage, deletePolicy, trackAction} ) =>
             <td> {policy.type} </td>
             <td> {policy.claimAmount} </td>
             <td> {policy.dateCreated} </td>
-            <td> <button value={policy.policyID} onClick={deleteSelectedPolicy}> Delete </button> </td> 
+            <td> <button 
+                    value={policy.policyID} 
+                    onClick={deleteSelectedPolicy}
+                    className="delete_or_submit_button"
+                    > Delete </button> </td> 
             <br />
         </tr>
         

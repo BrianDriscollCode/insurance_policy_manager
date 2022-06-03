@@ -7,7 +7,7 @@ const PolicySubmitted = ({setPage, setPolicyCreator}) => {
 
         <div> 
             <h3> Policy has been submitted! </h3>
-            <button onClick={() => setPolicyCreator()} > Create new policy </button>
+            <button className="delete_or_submit_button" onClick={() => setPolicyCreator()} > Create new policy </button>
 
         </div>
 

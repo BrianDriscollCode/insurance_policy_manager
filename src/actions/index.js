@@ -39,3 +39,12 @@ export const processClaim = (claim) => {
     }
 
 }
+
+export const editPolicyFromClaim = (claimObject) => {
+
+    return {
+        type: "EDIT_CLAIM",
+        payload: claimObject
+    }
+
+}

@@ -28,6 +28,7 @@ const Navigation = ( {setPage, budget, policies} ) => {
                         
                             <button 
                                     className='nav_button' 
+                                    id="nav_button_id"
                                     onClick={() => pageSetter('PolicyCreator')}
                                     > 
                                 Create Policy 
@@ -39,6 +40,7 @@ const Navigation = ( {setPage, budget, policies} ) => {
                        
                             <button 
                                     className='nav_button'
+                                    id="nav_button_id"
                                     onClick={() => pageSetter('SeeCurrentPolicies')}
                                     > See Current Policies 
                             </button> 
@@ -49,6 +51,7 @@ const Navigation = ( {setPage, budget, policies} ) => {
                     
                             <button 
                                 className='nav_button'
+                                id="nav_button_id"
                                 onClick={() => pageSetter('ProcessClaims')}
                             > Process Claims 
                             </button> 

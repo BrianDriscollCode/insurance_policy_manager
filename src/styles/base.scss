@@ -21,6 +21,44 @@ $btnTextColor: white;
     width: 50%;
     padding: 20px 0 20px 0;
     margin: 40px 0 0 0;
+    
+
+}
+
+@mixin buttonStyles {
+    
+    background-color: rgb(253, 222, 84);
+    border-color:black;
+    border-radius: 5px;
+    border: 2px solid rgb(253, 222, 84);
+    box-shadow: -4px 3px 12px -6px rgba(130,130,17,0.69);
+
+}
+
+@mixin buttonReset {
+    border: none;
+    font: inherit;
+    color: inherit;
+    cursor: pointer;
+    background-color: aqua;
+    
+}
+
+#button_black {
+    color:black
+}
+
+.delete_or_submit_button {
+
+    @include buttonStyles
+
+}
+
+.delete_or_submit_button:hover {
+
+    @include buttonStyles;
+    background-color: white;
+    align-items: center;
 
 }
 
@@ -34,6 +72,7 @@ body {
     background: $secondBackgroundColor;
     font-family: 'Roboto', sans-serif;
 }
+
 
 header {
     width: 100%;
@@ -58,7 +97,7 @@ h1 {
     align-items: center;
 }
 
-header tagline {
+header p {
 
     font-size: 30px;
 
@@ -105,4 +144,10 @@ footer {
     align-items: center;
     background-color: azure;
     height: 300px;
+}
+
+@media screen and (max-width: 1000px) {
+    
+
+
 }
