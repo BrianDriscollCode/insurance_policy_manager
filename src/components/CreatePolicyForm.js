@@ -50,6 +50,12 @@ const CreatePolicyForm = ( props ) => {
 
     }
 
+    const handleClick = (event) => {
+
+        event.target.select()
+
+    }
+
     const submitNewPolicy = (e) => {
 
         e.preventDefault();
@@ -59,7 +65,7 @@ const CreatePolicyForm = ( props ) => {
         let currentDate = (d.getMonth() + 1).toString() + '/' + d.getDate().toString() + '/' + d.getFullYear().toString()
 
         props.trackAction({action: 'Created Policy', date: currentDate, policyID: uniqueID})
-        props.createPolicy({firstName: firstName, lastName: lastName, policyID: uniqueID, age: age, type: type, claimAmount: claimAmount, dateCreated: currentDate})
+        props.createPolicy({firstName: firstName.trim(), lastName: lastName.trim(), policyID: uniqueID, age: age, type: type, claimAmount: claimAmount, dateCreated: currentDate})
         
         setPolicyCreator(); //toggle to submit message page "<PolicySubmitted /> via <PolicyCreator />"
 
@@ -108,6 +114,7 @@ const CreatePolicyForm = ( props ) => {
                         type="number"
                         value={age}
                         onChange={handleAgeChange}
+                        onClick={handleClick}
                     />
 
                 </div>
@@ -130,6 +137,7 @@ const CreatePolicyForm = ( props ) => {
                         type="number"
                         value={claimAmount}
                         onChange={handleClaimAmountChange}
+                        onClick={handleClick}
                     />
 
                 </div>

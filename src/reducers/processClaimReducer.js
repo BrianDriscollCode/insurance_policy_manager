@@ -4,11 +4,10 @@ export default (totalBudget = initialBudget, action) => {
 
     if (action.type === "PROCESS_CLAIM") {
 
-        totalBudget -= action.claimAmount;
-        return totalBudget
+        return totalBudget - action.payload;
 
     }
 
-    return totalBudget
+    return totalBudget;
 
 }

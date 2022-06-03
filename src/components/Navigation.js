@@ -1,7 +1,8 @@
 import React from 'react'
+import { connect } from 'react-redux' 
 import main_icon from '../images/main_icon.png'
 
-const Navigation = ( {setPage} ) => {
+const Navigation = ( {setPage, budget, policies} ) => {
 
 
     const pageSetter = (pageName) => {
@@ -68,12 +69,12 @@ const Navigation = ( {setPage} ) => {
 
                         <div>
                             <label> Budget: </label> 
-                            <span> NUMBER </span>
+                            <span> ${ budget.toLocaleString() } </span>
                         </div>
 
                         <div>
                             <label> Policy Holders: </label> 
-                            <span> NUMBER </span>
+                            <span> { policies.length }  </span>
                         </div>
 
                     </div>
@@ -92,4 +93,10 @@ const Navigation = ( {setPage} ) => {
 
 }
 
-export default Navigation
+const mapStateToProps = (state) => {
+
+    return { budget: state.budget, policies: state.policies }
+
+}
+
+export default connect(mapStateToProps)(Navigation)
