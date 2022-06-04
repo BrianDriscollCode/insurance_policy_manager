@@ -44,4 +44,17 @@
           flex-direction: column;
   margin: 0 0 40px 0;
 }
+
+@media screen and (max-width: 800px) {
+  .createPolicyForm {
+    width: 80%;
+  }
+  .createPolicyContainer h2 {
+    margin-top: 20px;
+    text-align: center;
+  }
+  .submitButtonContainer {
+    margin-bottom: 20px;
+  }
+}
 /*# sourceMappingURL=CreatePolicyForm.css.map */

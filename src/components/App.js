@@ -11,6 +11,7 @@ import '../styles/base.css'
 import '../styles/Navigation.css'
 import '../styles/SeeCurrentPolicies.css'
 import '../styles/CreatePolicyForm.css'
+import '../styles/ProcessClaims.css'
 
 
 

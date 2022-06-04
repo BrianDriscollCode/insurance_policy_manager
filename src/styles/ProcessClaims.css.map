@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AACA,MAAM,CAAC,MAAM,MAAM,SAAS,EAAE,KAAK;EAG/B,AAAA,wBAAwB,CAAC;IAGrB,UAAU,EAAE,2FAA2F;GAG1G;EAED,AAAA,wBAAwB,CAAC,KAAK,CAAC;IAE3B,UAAU,EAAE,IAAI;GACnB;EAGD,AAAA,6BAA6B,CAAC;IAE1B,aAAa,EAAE,IAAI;GAEtB",
+    "sources": [
+        "ProcessClaims.scss"
+    ],
+    "names": [],
+    "file": "ProcessClaims.css"
+}

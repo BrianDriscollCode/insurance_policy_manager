@@ -122,4 +122,14 @@ footer {
   background-color: azure;
   height: 300px;
 }
+
+@media screen and (max-width: 1150px) {
+  #root {
+    overflow: visible;
+  }
+  .left_portion {
+    width: 100%;
+    border-radius: 0;
+  }
+}
 /*# sourceMappingURL=base.css.map */

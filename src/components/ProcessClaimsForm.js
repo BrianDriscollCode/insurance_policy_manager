@@ -58,7 +58,7 @@ const ProcessClaims = ( {budget, policies, processClaim, trackSubmittal, editPol
     return(
 
         
-        <div>
+        <div className="process_claim_container">
             <label> Search Policy </label>
             <div className="ui form field" style={{ marginTop: 20}}>
                 <input ref={inputRef} onClick={handleClick} onChange={handleInput} value={searchInput} />   
@@ -81,7 +81,9 @@ const ProcessClaims = ( {budget, policies, processClaim, trackSubmittal, editPol
                     
                     policies.map((policy) => 
                     
-                        policy.firstName == searchInput.trim() || policy.firstName.toLowerCase() == searchInput.toLowerCase().trim() ? 
+                        policy.firstName == searchInput.trim() || policy.firstName.toLowerCase() == searchInput.toLowerCase().trim() ||
+                        policy.policyID == searchInput.trim() || policy.policyID.toLowerCase() == searchInput.toLowerCase().trim() ||
+                        policy.lastName == searchInput.trim() || policy.lastName.toLowerCase() == searchInput.toLowerCase().trim() ? 
                             <tr key={policy.id} >
                                 <td> {policy.firstName} </td> 
                                 <td> {policy.lastName} </td> 
@@ -113,78 +115,6 @@ const ProcessClaims = ( {budget, policies, processClaim, trackSubmittal, editPol
                     
                 
                 }
-
-                {
-
-                    policies.map((policy) => 
-                                        
-                        policy.policyID == searchInput.trim() || policy.policyID.toLowerCase() == searchInput.toLowerCase().trim() ? 
-                            <tr key={policy.id} >
-                                <td> {policy.firstName} </td> 
-                                <td> {policy.lastName} </td> 
-                                <td> {policy.policyID} </td> 
-                                <td> {policy.type} </td>
-                                <td> {policy.claimAmount} </td>
-                                <td>  
-                                    <button 
-                                        className='delete_or_submit_button' 
-                                        onClick={dispatchClaim} 
-                                        value={policy.policyID}> 
-                                            
-                                            Claim 
-                                    </button> 
-                                </td>
-                                <td> 
-                                    <select value={percentage} onChange={handleSelectChange}>  
-                                        <option value={0}> 0% </option>
-                                        <option value={0.25}> 25% </option>
-                                        <option value={0.50}> 50% </option>
-                                        <option value={0.75}> 75% </option>
-                                        <option value={1}> 100% </option>
-                                    </select> 
-                                </td>  
-                                <br />
-                            </tr> : null
-
-                    )
-
-                }
-
-                {
-
-                    policies.map((policy) => 
-                                        
-                        policy.lastName == searchInput.trim() || policy.lastName.toLowerCase() == searchInput.toLowerCase().trim() ? 
-                            <tr key={policy.id} >
-                                <td> {policy.firstName} </td> 
-                                <td> {policy.lastName} </td> 
-                                <td> {policy.policyID} </td> 
-                                <td> {policy.type} </td>
-                                <td> {policy.claimAmount} </td>
-                                <td> 
-                                    <button 
-                                        className='delete_or_submit_button' 
-                                        onClick={dispatchClaim} 
-                                        value={policy.policyID}> 
-                                            
-                                            Claim 
-                                    </button> 
-                                </td>
-                                <td> 
-                                    <select value={percentage} onChange={handleSelectChange}>  
-                                        <option value={0}> 0% </option><option value={0}> 0% </option>
-                                        <option value={0.25}> 25% </option>
-                                        <option value={0.50}> 50% </option>
-                                        <option value={0.75}> 75% </option>
-                                        <option value={1}> 100% </option>
-                                    </select> 
-                                </td> 
-                                <br />
-                            </tr> : null
-
-                    )
-
-                }
                 
             </table>
 
@@ -193,7 +123,7 @@ const ProcessClaims = ( {budget, policies, processClaim, trackSubmittal, editPol
                 Claim amount: {calculatedClaim}
 
             </div>
-            <div>
+            <div className='budget_after_claim_container'>
                 Budget after claim: {'$' + (budget - calculatedClaim).toLocaleString()}
             </div> 
 

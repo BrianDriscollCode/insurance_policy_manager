@@ -1,0 +1,12 @@
+@media screen and (max-width: 727px) {
+  .process_claim_container {
+    background: linear-gradient(135deg, #54617e 14%, #45597c 52%, #344b65 100%, #fdd0ff 100%, #3a4849 100%);
+  }
+  .process_claim_container label {
+    margin-top: 20px;
+  }
+  .budget_after_claim_container {
+    margin-bottom: 20px;
+  }
+}
+/*# sourceMappingURL=ProcessClaims.css.map */

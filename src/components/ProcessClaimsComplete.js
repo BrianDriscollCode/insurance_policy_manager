@@ -6,7 +6,7 @@ const ProcessClaimsComplete = ( {trackSubmittal} ) => {
 
     return (
 
-        <div> 
+        <div className="process_claim_container"> 
 
          <h2> Claim Submitted </h2>  
          <button 

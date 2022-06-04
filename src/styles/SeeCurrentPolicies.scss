@@ -44,7 +44,7 @@
   }
   
   #customers tr:nth-child(even){background-color: #3e4a6e;}
-   #customers tr:nth-child(even){background-color: #494a61;}
+   #customers tr:nth-child(odd){background-color: #494a61;}
   
   #customers tr:hover {background-color: #ddd;}
   
@@ -54,4 +54,23 @@
     text-align: left;
     background-color: #04AA6D;
     color: white;
+  }
+
+  @media screen and (max-width: 1150px) {
+    
+
+    .see_policies_container {
+
+
+      background: linear-gradient(135deg, #54617e 14%, #45597c 52%, #344b65 100%, #fdd0ff 100%, #3a4849 100%);
+
+    }
+    
+  }
+
+  @media screen and (max-width: 550px) {
+
+    #customers tr:nth-child(even){background-color: transparent;}
+    #customers tr:nth-child(odd){background-color: transparent;}
+    
   }

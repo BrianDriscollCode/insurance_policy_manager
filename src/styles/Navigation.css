@@ -123,6 +123,16 @@ footer {
   height: 300px;
 }
 
+@media screen and (max-width: 1150px) {
+  #root {
+    overflow: visible;
+  }
+  .left_portion {
+    width: 100%;
+    border-radius: 0;
+  }
+}
+
 .navigation_page {
   width: 100%;
   display: -webkit-box;
@@ -251,5 +261,86 @@ footer {
 
 .nav_button:hover {
   background-color: white;
+}
+
+@media screen and (max-width: 1150px) {
+  body {
+    background: none;
+    background-color: #6a74ff;
+  }
+  header {
+    display: none;
+  }
+  .navigation_page {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .right_portion {
+    overflow-y: visible;
+    background: linear-gradient(135deg, #54617e 14%, #45597c 52%, #344b65 100%, #fdd0ff 100%, #3a4849 100%);
+  }
+  .company_info_container {
+    width: auto;
+  }
+}
+
+@media screen and (max-width: 725px) {
+  table, thead, tbody, th, td, tr {
+    display: block;
+  }
+  .right_portion {
+    background: none;
+  }
+  .createPolicyContainer {
+    background: linear-gradient(135deg, #54617e 14%, #45597c 52%, #344b65 100%, #fdd0ff 100%, #3a4849 100%);
+  }
+  .see_policies_container td:nth-of-type(1):before {
+    content: "First Name:";
+  }
+  td:nth-of-type(2):before {
+    content: "Last Name:";
+  }
+  td:nth-of-type(3):before {
+    content: "ID:";
+  }
+  td:nth-of-type(4):before {
+    content: "Age:";
+  }
+  td:nth-of-type(5):before {
+    content: "Type:";
+  }
+  td:nth-of-type(6):before {
+    content: "Claim Amount:";
+  }
+  td:nth-of-type(7):before {
+    content: "Date:";
+  }
+  .process_claim_container td:nth-of-type(1):before {
+    content: "First Name:";
+  }
+  td:nth-of-type(2):before {
+    content: "Last Name:";
+  }
+  td:nth-of-type(3):before {
+    content: "ID:";
+  }
+  td:nth-of-type(4):before {
+    content: "Type:";
+  }
+  td:nth-of-type(5):before {
+    content: "Claim Amount:";
+  }
+  td:nth-of-type(7):before {
+    content: "Percentage:";
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .left_portion {
+    height: 140%;
+    margin-bottom: 30px;
+  }
 }
 /*# sourceMappingURL=Navigation.css.map */
